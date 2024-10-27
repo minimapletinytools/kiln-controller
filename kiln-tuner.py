@@ -54,6 +54,7 @@ def recordprofile(csvfile, targettemp):
             if config.simulate:
                 oven.heat_then_cool()
             else:
+                print("real  oven")
                 oven.output.heat(sleepfor)
             temp = oven.board.temp_sensor.temperature() + \
                 config.thermocouple_offset

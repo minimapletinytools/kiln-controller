@@ -40,13 +40,15 @@ class Output(object):
     '''
     def __init__(self):
         self.active = False
-        self.heater = digitalio.DigitalInOut(config.gpio_heat) 
+        self.heater = digitalio.DigitalInOut(config.gpio_heat)
+        print(f"init  with {config.gpio_heat}") 
         self.heater.direction = digitalio.Direction.OUTPUT 
         self.off = config.gpio_heat_invert
         self.on = not self.off
 
     def heat(self,sleepfor):
         self.heater.value = self.on
+        print("heater ON")
         time.sleep(sleepfor)
 
     def cool(self,sleepfor):
