@@ -129,7 +129,7 @@ seek_start = True
 # Every N seconds a decision is made about switching the relay[s] 
 # on & off and for how long. The thermocouple is read 
 # temperature_average_samples times during and the average value is used.
-sensor_time_wait = 2
+sensor_time_wait = 10
 
 
 ########################################################################
@@ -143,6 +143,12 @@ sensor_time_wait = 2
 pid_kp = 10   # Proportional 25,200,200
 pid_ki = 80   # Integral
 pid_kd = 220.83497910261562 # Derivative
+
+
+# numbers from auto-tune lol
+#pid_kp = -39.82752327716244
+#pid_ki = 5.505428857849489
+#pid_kd = 2183.2213207725567
 
 ########################################################################
 #
