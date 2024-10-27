@@ -84,10 +84,10 @@ currency_type   = "$"   # Currency Symbol to show when calculating cost to run j
 
 try:
     import board
-    spi_sclk  = board.D17    #spi clock
-    spi_miso  = board.D27    #spi Microcomputer In Serial Out
-    spi_cs    = board.D22    #spi Chip Select
-    spi_mosi  = board.D10    #spi Microcomputer Out Serial In (not connected) 
+    #spi_sclk  = board.D17    #spi clock
+    #spi_miso  = board.D27    #spi Microcomputer In Serial Out
+    spi_cs    = board.D5    #spi Chip Select
+    #spi_mosi  = board.D10    #spi Microcomputer Out Serial In (not connected) 
     gpio_heat = board.D23    #output that controls relay
     gpio_heat_invert = False #invert the output state
 except (NotImplementedError,AttributeError):
@@ -102,8 +102,8 @@ except (NotImplementedError,AttributeError):
 max31855 = 1
 max31856 = 0
 # uncomment these two lines if using MAX-31856
-import adafruit_max31856
-thermocouple_type = adafruit_max31856.ThermocoupleType.K
+#import adafruit_max31856
+#thermocouple_type = adafruit_max31856.ThermocoupleType.K
 
 # here are the possible max-31856 thermocouple types
 #   ThermocoupleType.B
